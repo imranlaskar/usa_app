@@ -14,16 +14,21 @@ class _AboutUSAState extends State<AboutUSA> {
       appBar: AppBar(
         title: Text("সমিতি সম্পর্কে"),
       ),
-      body: Container(
+      body:
+      Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("Assets/images/back.jpg"),
-            fit: BoxFit.cover
-          )
+              image: AssetImage("assets/images/back.jpg"),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(Colors.black,
+                  BlendMode.dstATop)
+          ),
         ),
         child: Column(
           children: [
-            Text("About USA")
+            Text("নিয়মাবলী"),
           ],
         ),
       ),

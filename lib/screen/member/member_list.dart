@@ -24,71 +24,25 @@ class _MemberListState extends State<MemberList> {
             fit: BoxFit.cover
           )
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              children: [
-                Text("সভাপতি",style: TextStyle(fontSize: 18,color: Colors.white),),
-                Container(
-                  height: 140,
-                    width: 120,
-                    child: Image.asset("assets/images/Emon.jpg")),
-                SizedBox(height: 15,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      children: [
-                        Text("সহ-সভাপতি",style: TextStyle(fontSize: 18,color: Colors.white),),
-                        Container(
-                            height: 140,
-                            width: 120,
-                            child: Image.asset("assets/images/Jahid.jpg")),
-                      ],
-                    ),
-                    SizedBox(width: 25,),
-                    Column(
-                      children: [
-                        Text("হিসাবরক্ষক",style: TextStyle(fontSize: 18,color: Colors.white),),
-                        Container(
-                            height: 140,
-                            width: 120,
-                            child: Image.asset("assets/images/Imran.jpg")),
-                      ],
-                    )
-                  ],
-                ),
-                SizedBox(height: 15,),
-                Text("সদস্য",style: TextStyle(fontSize: 18,color: Colors.white),),
-                Container(
-                  child:
-                  GridView.count(
-                    crossAxisCount: 3,
-                    childAspectRatio: 1,
-                    children: memberImageList.map((item){
-                      return Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: InkWell(
-                          child: Container(
-                              height: containerHeight,
-                              width: containerWidth,
-                              child: Image.asset(item)),
-                          onTap: (){
-                            setState(() {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=>MemberDetails()));
-                            });
-                          },
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        child: GridView.count(
+          crossAxisCount: 3,
+          childAspectRatio: 1,
+          children: memberImageList.map((e){
+            return Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: InkWell(
+                child: Container(
+                    height: containerHeight,
+                    width: containerWidth,
+                    child: Image.asset(e,fit: BoxFit.cover,)),
+                onTap: (){
+                  setState(() {
+
+                  });
+                },
+              ),
+            );
+          }).toList(),
         ),
       ),
     );

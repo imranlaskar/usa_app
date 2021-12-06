@@ -14,7 +14,10 @@ class _RulesState extends State<Rules> {
         appBar: AppBar(
           title: Text("নিয়মাবলী"),
         ),
-        body: Container(
+        body:
+        Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           image: DecorationImage(
           image: AssetImage("assets/images/back.jpg"),
