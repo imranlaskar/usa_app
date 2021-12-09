@@ -142,8 +142,8 @@ class _MemberListState extends State<MemberList> {
                               MaterialPageRoute(builder: (context)=>AuthorityDetails(
                                   img: e, name: e,
                                   fatherName: e, memberNo: e,
-                                  admitionDate: e, address: e)));
-                        });
+                                  admitionDate: e, address: e)));}
+                        );
                       },
                     ),
                   );
@@ -157,19 +157,46 @@ class _MemberListState extends State<MemberList> {
   }
 }
 
-
 double containerHeight =  140;
 double containerWidth =  100;
 
 List <MemberListModel> listOfModel = [
   memberListModel1,
   memberListModel2,
-  memberListModel3
+  memberListModel3,
+  memberListModel4,
+  memberListModel5,
+  memberListModel6,
+  memberListModel7,
+  memberListModel8,
+  memberListModel9,
+  memberListModel10,
+  memberListModel11,
+  memberListModel12,
+  memberListModel13,
+  memberListModel14,
+  memberListModel15,
+  memberListModel16,
+  memberListModel17
 ];
 
 MemberListModel memberListModel1 = MemberListModel("assets/images/sahin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
 MemberListModel memberListModel2 = MemberListModel("assets/images/Robiul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel3 = MemberListModel("assets/images/Robiul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel3 = MemberListModel("assets/images/Aminul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel4 = MemberListModel("assets/images/Alom.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel5 = MemberListModel("assets/images/Imran.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel6 = MemberListModel("assets/images/Belal.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel7 = MemberListModel("assets/images/Saidul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel8 = MemberListModel("assets/images/Torikul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel9 = MemberListModel("assets/images/Romjan.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel10 = MemberListModel("assets/images/Tanvir.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel11 = MemberListModel("assets/images/Imran.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel12 = MemberListModel("assets/images/Imran.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel13 = MemberListModel("assets/images/Kamal.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel14 = MemberListModel("assets/images/Tarek.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel15 = MemberListModel("assets/images/Salauddin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel16 = MemberListModel("assets/images/Nahid.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel17 = MemberListModel("assets/images/Anu.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
 
 List<String> memberImageList = [
   "assets/images/sahin.jpg",

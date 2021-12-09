@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:usa_app/utill/all_size.dart';
+
 class AuthorityDetails extends StatefulWidget {
 
   String img; String name; String fatherName; String memberNo; String admitionDate; String address;
