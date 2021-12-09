@@ -1,8 +1,13 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:usa_app/helper/manu_wized.dart';
+import 'package:usa_app/screen/about_us/about_us.dart';
 import 'package:usa_app/screen/about_usa.dart';
+import 'package:usa_app/screen/account/account_namber.dart';
 import 'package:usa_app/screen/member/member_list.dart';
 import 'package:usa_app/screen/roles.dart';
+import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -10,30 +15,69 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+GlobalKey<SliderMenuContainerState> _key =
+new GlobalKey<SliderMenuContainerState>();
+
 double buttonFontSize = 20;
 double buttonHeight = 50;
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    double height= MediaQuery.of(context).size.height;
+    double width= MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Uttarpara Student Association"),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/back.jpg"),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(Colors.black,
-                  BlendMode.dstATop)
+      body: SliderMenuContainer(
+          appBarColor: Colors.teal,
+          key: _key,
+          sliderMenuCloseSize: 0,
+          title: Text("Uttarpara Student Association",style: TextStyle(color: Colors.white,
+            fontSize: width*0.055,fontWeight: FontWeight.w800),),
+          shadowColor: Colors.transparent,
+          drawerIconColor: Colors.white,
+          drawerIconSize: width*0.08,
+        //slideDirection: Slider.RIGHT_TO_LEFT,
+        //appBarPadding: const EdgeInsets.only(top: 10),
+          sliderMenuOpenSize: 300,
+          appBarHeight: 100,
+          appBarPadding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+          sliderMenu: MenuWidget(
+      //  onProfilePictureClick: () {},
+            onItemClick: (title) {
+              _key.currentState!.closeDrawer();
+              setState(() {
+                title = title;
+                if(title=="ABOUT US"){
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
+                }else if(title=="Rate this App"){
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
+                }else if(title=="More App") {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
+                }
+              });
+              },
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
+        sliderMain: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/back.jpg"),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(Colors.black,
+                    BlendMode.dstATop)
+    ),
+    ),
+    child: Padding(
+            padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
                 Image.asset("assets/images/USA2.png"),
@@ -140,7 +184,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   )
                               ),
                               onPressed: (){
-
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context)=>AccountDetails()));
                               },
                             ),
                           ),
@@ -203,8 +248,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-        ),
       ),
+    ]
+    ),
+        )
+      )
     );
   }
 }

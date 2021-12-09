@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:usa_app/model/member_list_model.dart';
 import 'package:usa_app/screen/member/authority_details.dart';
 import 'package:usa_app/utill/all_size.dart';
 
@@ -137,7 +138,11 @@ class _MemberListState extends State<MemberList> {
                           child: Image.asset(e,fit: BoxFit.cover,)),
                       onTap: (){
                         setState(() {
-
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context)=>AuthorityDetails(
+                                  img: e, name: e,
+                                  fatherName: e, memberNo: e,
+                                  admitionDate: e, address: e)));
                         });
                       },
                     ),
@@ -155,6 +160,16 @@ class _MemberListState extends State<MemberList> {
 
 double containerHeight =  140;
 double containerWidth =  100;
+
+List <MemberListModel> listOfModel = [
+  memberListModel1,
+  memberListModel2,
+  memberListModel3
+];
+
+MemberListModel memberListModel1 = MemberListModel("assets/images/sahin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel2 = MemberListModel("assets/images/Robiul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
+MemberListModel memberListModel3 = MemberListModel("assets/images/Robiul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
 
 List<String> memberImageList = [
   "assets/images/sahin.jpg",
