@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:usa_app/helper/manu_wized.dart';
+import 'package:usa_app/online_comunication/online_comunication.dart';
 import 'package:usa_app/screen/about_us/about_us.dart';
 import 'package:usa_app/screen/about_usa.dart';
 import 'package:usa_app/screen/account/account_namber.dart';
@@ -210,7 +211,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   )
                               ),
                               onPressed: (){
-
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context)=>OnlineComunication()));
                               },
                             ),
                           ),

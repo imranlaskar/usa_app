@@ -33,6 +33,54 @@ class _OnlineComunicationState extends State<OnlineComunication> {
                         bottomRight: Radius.circular(30),
                       )
                   ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 20,),
+                      Container(
+                        height: 150,
+                          width: 150,
+                          child: Image.asset("assets/images/online_comu/Facebook.png")),
+                      SizedBox(height: 20,),
+                      Text("Facebook",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.indigo
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                Container(
+                  height: 250,
+                  width: 250,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                        bottomLeft: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      )
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 20,),
+                      Container(
+                          height: 150,
+                          width: 150,
+                          child: Image.asset("assets/images/online_comu/mesenger.png")),
+                      SizedBox(height: 20,),
+                      Text("Mesenger",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.indigo
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

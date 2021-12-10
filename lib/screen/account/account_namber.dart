@@ -78,10 +78,38 @@ class _AccountDetailsState extends State<AccountDetails> {
                   Text("01635612464-6",
                     style: TextStyle(
                         fontSize: 30
-                    ),)
+                    ),),
+
                 ],
               ),
             ),
+            SizedBox(height: 10,),
+            Container(
+              height: 60,
+              width: 320,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 15,),
+                  Container(
+                      height: 50,
+                      width: 50,
+                      child: Image.asset("assets/acc_img/DBBLbank.jpg")),
+                  SizedBox(width: 15,),
+                  Text("7017510410489",
+                    style: TextStyle(
+                        fontSize: 30
+                    ),),
+
+                ],
+              ),
+            ),
+            SizedBox(height: 10,),
+            Text(""),
+
           ],
         ),
       ),
