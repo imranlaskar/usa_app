@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:usa_app/model/member_list_model.dart';
 import 'package:usa_app/utill/all_size.dart';
 
-class AuthorityDetails extends StatefulWidget {
+class MainAuthority extends StatefulWidget {
+  String img,name, fatherName, memberNo, admitionDate, address;
 
-  MemberListModel memberListModel;
-  AuthorityDetails({Key? key,required this.memberListModel}) : super(key: key);
+  MainAuthority({Key? key,required this.img, required this.name, required this.fatherName,
+  required this.memberNo, required this.admitionDate, required this.address}) : super(key: key);
 
   @override
-  _AuthorityDetailsState createState() => _AuthorityDetailsState();
+  _MainAuthorityState createState() => _MainAuthorityState();
 }
 
-class _AuthorityDetailsState extends State<AuthorityDetails> {
+class _MainAuthorityState extends State<MainAuthority> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,35 +23,35 @@ class _AuthorityDetailsState extends State<AuthorityDetails> {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-            Container(
-            height: 200,
-            width: 180,
-                child: Image.asset(widget.memberListModel.img)
-            ),
+              Container(
+                  height: 200,
+                  width: 180,
+                  child: Image.asset(widget.img)
+              ),
               SizedBox(height: 8,),
-              Text("নাম : ${widget.memberListModel.name}",
+              Text("নাম : ${widget.name}",
                 style: TextStyle(
-                  fontSize: AllSize.textSize25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple
+                    fontSize: AllSize.textSize25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.purple
                 ),),
               SizedBox(height: 8,),
-              Text("বাবার নাম : ${widget.memberListModel.fatherName}",
-                style: TextStyle(
-                  fontSize: AllSize.textSize20
-                ),),
-              SizedBox(height: 8,),
-              Text("সদস্য নম্বর : ${widget.memberListModel.mdmberNo}",
+              Text("বাবার নাম : ${widget.fatherName}",
                 style: TextStyle(
                     fontSize: AllSize.textSize20
                 ),),
               SizedBox(height: 8,),
-              Text("ভর্তির তারিখ : ${widget.memberListModel.admitionDate}",
+              Text("সদস্য নম্বর : ${widget.memberNo}",
                 style: TextStyle(
                     fontSize: AllSize.textSize20
                 ),),
               SizedBox(height: 8,),
-              Text("ঠিকানা : ${widget.memberListModel.address} কোটালীপাড়া,",
+              Text("ভর্তির তারিখ : ${widget.admitionDate}",
+                style: TextStyle(
+                    fontSize: AllSize.textSize20
+                ),),
+              SizedBox(height: 8,),
+              Text("ঠিকানা : ${widget.address}",
                 style: TextStyle(
                     fontSize: AllSize.textSize20
                 ),),

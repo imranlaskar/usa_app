@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:usa_app/model/member_list_model.dart';
 import 'package:usa_app/screen/member/authority_details.dart';
+import 'package:usa_app/screen/member/main_authority.dart';
 import 'package:usa_app/utill/all_size.dart';
 
 class MemberList extends StatefulWidget {
@@ -50,13 +51,13 @@ class _MemberListState extends State<MemberList> {
                       ),
                       onTap: (){
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=>AuthorityDetails(
+                            MaterialPageRoute(builder: (context)=>MainAuthority(
                                 img: "assets/images/Jahid.jpg",
                                 name: "মোঃ জাহিদ শিকদার",
                                 fatherName: "মোঃ আইউব আলী শিকদার",
                                 memberNo: "০১ (এক)",
-                                admitionDate: "-/-/-",
-                                address: "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ"
+                                admitionDate: "০৯/০৭/২০১৫",
+                                address: "উত্তরপাড়া, কোটালীপাড়া,"
                             )));
                       },
                     ),
@@ -76,13 +77,13 @@ class _MemberListState extends State<MemberList> {
                       child: InkWell(
                         onTap: (){
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context)=>AuthorityDetails(
+                              MaterialPageRoute(builder: (context)=>MainAuthority(
                                   img: "assets/images/Emon.jpg",
                                   name: "মোঃ ইমন হাওলাদার",
                                   fatherName: "মোঃ ছরোয়ার হাওলাদার",
                                   memberNo: "০২ (দুই)",
-                                  admitionDate: "-/-/-",
-                                  address: "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ")));
+                                  admitionDate: "০৯/০৭/২০১৫",
+                                  address: "উত্তরপাড়া, কোটালীপাড়া,")));
                         },
                           child: Image.asset("assets/images/Emon.jpg")),
                     ),
@@ -104,13 +105,13 @@ class _MemberListState extends State<MemberList> {
                       child: InkWell(
                         onTap: (){
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context)=>AuthorityDetails(
+                              MaterialPageRoute(builder: (context)=>MainAuthority(
                                   img: "assets/images/Imran.jpg",
                                   name: "মোঃ ইমরান লস্কর",
                                   fatherName: "মোঃ জাফর লস্কর",
                                   memberNo: "০৪ (চার)",
-                                  admitionDate: "-/-/-",
-                                  address: "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ")));
+                                  admitionDate: "০৯/০৭/২০১৫",
+                                  address: "উত্তরপাড়া, কোটালীপাড়া,")));
                         },
                           child: Image.asset("assets/images/Imran.jpg")),
                     ),
@@ -128,22 +129,18 @@ class _MemberListState extends State<MemberList> {
               child: GridView.count(
                 crossAxisCount: 3,
                 childAspectRatio: 1,
-                children: memberImageList.map((e){
+                children: listOfModel.map((e){
                   return Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: InkWell(
                       child: Container(
                           height: containerHeight,
                           width: containerWidth,
-                          child: Image.asset(e,fit: BoxFit.cover,)),
+                          child: Image.asset(e.img,fit: BoxFit.cover,)),
                       onTap: (){
-                        setState(() {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context)=>AuthorityDetails(
-                                  img: e, name: e,
-                                  fatherName: e, memberNo: e,
-                                  admitionDate: e, address: e)));}
-                        );
+                              MaterialPageRoute(builder: (context)=>AuthorityDetails(memberListModel: e,
+                               )));
                       },
                     ),
                   );
@@ -180,40 +177,20 @@ List <MemberListModel> listOfModel = [
   memberListModel17
 ];
 
-MemberListModel memberListModel1 = MemberListModel("assets/images/sahin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel2 = MemberListModel("assets/images/Robiul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel3 = MemberListModel("assets/images/Aminul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel4 = MemberListModel("assets/images/Alom.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel5 = MemberListModel("assets/images/Imran.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel6 = MemberListModel("assets/images/Belal.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel7 = MemberListModel("assets/images/Saidul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel8 = MemberListModel("assets/images/Torikul.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel9 = MemberListModel("assets/images/Romjan.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel10 = MemberListModel("assets/images/Tanvir.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel11 = MemberListModel("assets/images/Imran.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel12 = MemberListModel("assets/images/Imran.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel13 = MemberListModel("assets/images/Kamal.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel14 = MemberListModel("assets/images/Tarek.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel15 = MemberListModel("assets/images/Salauddin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel16 = MemberListModel("assets/images/Nahid.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-MemberListModel memberListModel17 = MemberListModel("assets/images/Anu.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "-/-/-", "01931267305", "উত্তরপাড়া, কোটালীপাড়া, গোপালগঞ্জ");
-
-List<String> memberImageList = [
-  "assets/images/sahin.jpg",
-  "assets/images/Robiul.jpg",
-  "assets/images/Aminul.jpg",
-  "assets/images/Alom.jpg",
-  "assets/images/Imran.jpg",
-  "assets/images/Belal.jpg",
-  "assets/images/Saidul.jpg",
-  "assets/images/Torikul.jpg",
-  "assets/images/Romjan.jpg",
-  "assets/images/Tanvir.jpg",
-  "assets/images/Imran.jpg",
-  "assets/images/Imran.jpg",
-  "assets/images/Kamal.jpg",
-  "assets/images/Tarek.jpg",
-  "assets/images/Salauddin.jpg",
-  "assets/images/Nahid.jpg",
-  "assets/images/Anu.jpg",
-];
+MemberListModel memberListModel1 = MemberListModel("assets/images/sahin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "০৯/০৭/২০১৫", "০১৯৩১২৬৭৩০৫", "উত্তরপাড়া,");
+MemberListModel memberListModel2 = MemberListModel("assets/images/Robiul.jpg", "মোঃ রবিউল ইসলাম", "মোঃ ", "০৫ (পাঁচ)", "২১/০৮/২০১৫", "০১৯৩০১৪৩৪১৬", "উত্তরপাড়া,");
+MemberListModel memberListModel3 = MemberListModel("assets/images/Aminul.jpg", "মোঃ আমিনুল হাওলাদার", "মোঃ ", "০৬ (ছয়)", "২১/০৮/২০১৫", "০১৪০৩৬২৫৫১২", "উত্তরপাড়া, ");
+MemberListModel memberListModel4 = MemberListModel("assets/images/Alom.jpg", "মোঃ আলম শিকদার", "মোঃ শামিম শিকদার", "০৭ (সাত)", "২৯/০১/২০১৬", "০১৯৩৯৩৬৬৩৫২", "উত্তরপাড়া,");
+MemberListModel memberListModel5 = MemberListModel("assets/images/null.jpg", "মোঃ শাহিন শিকদার", "মোঃ আইউব আলী শিকদার", "০৮ (আট)", "০৮/০৪/২০১৬", "০১৯৪৭৪৩৮৩১২", "উত্তরপাড়া, ");
+MemberListModel memberListModel6 = MemberListModel("assets/images/Belal.jpg", "মোঃ বেলাল লস্কর", "মোঃ ছলেমান লস্কর", "০৯ (নয়)", "০৮/০৪/২০১৬", "০১৯৫২৬২৪৭৫৩", "উত্তরপাড়া, ");
+MemberListModel memberListModel7 = MemberListModel("assets/images/Saidul.jpg", "মোঃ সাইদুল হাওলাদার", "মোঃ আঃ সামাদ হাওলাদার", "১০ (দশ)", "০৮/০৪/২০১৬", "০১৯৮৮৩৯৭১৪৯", "উত্তরপাড়া, ");
+MemberListModel memberListModel8 = MemberListModel("assets/images/Torikul.jpg", "মোঃ তরিকুল ইসলাম", "মোঃ মুজিবুর রহমান", "১১ (এগারো)", "০৮/০৪/২০১৬", "০১৯৭১১৩৭৭৫৬", "উত্তরপাড়া, ");
+MemberListModel memberListModel9 = MemberListModel("assets/images/Romjan.jpg", "মোঃ রমজান শিকদার", "মোঃ ওহাব শিকদার", "১২ (বার)", "১৪/০৪/২০১৬", "০১৯৪৪১৬৯২৯৩", "জটিয়ার বাড়ি, ");
+MemberListModel memberListModel10 = MemberListModel("assets/images/Tanvir.jpg", "মোঃ তানভির তালুকদার", "মোঃ ফায়েক তালুকদার", "১৩ (তের)", "০৭/০৭/২০১৭", "০১৯৭১১৩৭৭৯২", "উত্তরপাড়া, ");
+MemberListModel memberListModel11 = MemberListModel("assets/images/null.jpg", "মোঃ মাসুদ তালুকদার", "মোঃ মুনসুর তালুকদার", "১৪ (চৌদ্দ)", "০৭/০৭/২০১৭", "০১৯৪০৪২৬৭০৬", "উত্তরপাড়া, ");
+MemberListModel memberListModel12 = MemberListModel("assets/images/null.jpg", "মোঃ মোস্তাকিম ফকির", "মোঃ সবুজ ফকির", "১৫ (পনেরো)", "০৭/০৭/২০১৭", "০১৯৩৭২৭৮৪৩৬", "পূর্বপাড়া, ");
+MemberListModel memberListModel13 = MemberListModel("assets/images/Kamal.jpg", "মোঃ কামাল মোল্লা", "মোঃ মতিয়ার মোল্লা", "১৬ (ষোল)", "২৪/১২/২০১৭", "০১৯৮২৪৬১২৩৫", "উত্তরপাড়া, ");
+MemberListModel memberListModel14 = MemberListModel("assets/images/Tarek.jpg", "মোঃ তারেক কাজী", "মোঃ নান্টু কাজী", "১৭ (সতেরো)", "৩১/১২/২০১৭", "০১৯৮০৪৯১২৩৩", "উত্তরপাড়া, ");
+MemberListModel memberListModel15 = MemberListModel("assets/images/Salauddin.jpg", "মোঃ সালাহউদ্দিন শিকদার", "মোঃ সাইফুল আলম", "১৮ (আঠারো)", "০২/০২/২০১৮", "০১৯১৫৮২১০৯৯", "উত্তরপাড়া, ");
+MemberListModel memberListModel16 = MemberListModel("assets/images/Nahid.jpg", "মোঃ নাহিদ লস্কর", "মোঃ জাফর লস্কর", "১৯ (ঊনিশ)", "০২/০২/২০১৮", "০১৯৩৮৯৬১১০৩", "উত্তরপাড়া,");
+MemberListModel memberListModel17 = MemberListModel("assets/images/Anu.jpg", "মোঃ মাহাবুব লস্কর", "মোঃ হাইউল লস্কর", "২০ (বিশ)", "২৮/০২/২০১৮", "০১৯৪৫৯১৬৮৯১", "উত্তরপাড়া,");
