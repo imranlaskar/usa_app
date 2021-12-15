@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Rules extends StatefulWidget {
@@ -12,6 +13,7 @@ class _RulesState extends State<Rules> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text("নিয়মাবলী"),
         ),
         body:
@@ -26,11 +28,21 @@ class _RulesState extends State<Rules> {
           BlendMode.dstATop)
           ),
           ),
-          child: Column(
-            children: [
-              Text("নিয়মাবলী"),
-          ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                children: [
+                  Text("নিয়মাবলী",
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white
+                    ),),
+              ],
         ),
+            ),
+          ),
       )
     );
   }

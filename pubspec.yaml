@@ -50,6 +50,7 @@ flutter:
   assets:
     - assets/images/
     - assets/acc_img/
+    - assets/images/online_comu/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

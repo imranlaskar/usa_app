@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AboutUSA extends StatefulWidget {
@@ -12,6 +13,7 @@ class _AboutUSAState extends State<AboutUSA> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("সমিতি সম্পর্কে"),
       ),
       body:
@@ -26,10 +28,21 @@ class _AboutUSAState extends State<AboutUSA> {
                   BlendMode.dstATop)
           ),
         ),
-        child: Column(
-          children: [
-            Text("নিয়মাবলী"),
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text("সমিতি সম্পর্কে",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
