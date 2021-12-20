@@ -120,6 +120,11 @@ class _MemberListState extends State<MemberList> {
               ],
             ),
           ),
+            Container(
+              height: 2,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.black,
+            ),
             Text("সদস্য",
               style: TextStyle(
                 fontSize: AllSize.textSize20,
