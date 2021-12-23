@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:usa_app/model/member_list_model.dart';
 import 'package:usa_app/screen/member/authority_details.dart';
 import 'package:usa_app/screen/member/main_authority.dart';
+import 'package:usa_app/utill/all_color.dart';
 import 'package:usa_app/utill/all_size.dart';
 
 class MemberList extends StatefulWidget {
@@ -17,6 +18,7 @@ class _MemberListState extends State<MemberList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AllColors.appBarColor,
         title: Text("সদস্যদের তালিকা"),
       ),
       body: Container(

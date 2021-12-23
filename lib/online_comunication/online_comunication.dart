@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:usa_app/utill/all_color.dart';
 
 class OnlineComunication extends StatefulWidget {
   const OnlineComunication({Key? key}) : super(key: key);
@@ -11,7 +12,9 @@ class _OnlineComunicationState extends State<OnlineComunication> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: AllColors.appBarColor,
+      ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,

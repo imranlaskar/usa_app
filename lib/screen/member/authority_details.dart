@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:usa_app/model/member_list_model.dart';
+import 'package:usa_app/utill/all_color.dart';
 import 'package:usa_app/utill/all_size.dart';
 
 class AuthorityDetails extends StatefulWidget {
@@ -16,6 +17,7 @@ class _AuthorityDetailsState extends State<AuthorityDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AllColors.appBarColor,
         title: Text("সদস্যদের বিবরন"),
       ),
       body: Center(

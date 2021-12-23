@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:usa_app/utill/all_color.dart';
 
 class Rules extends StatefulWidget {
   const Rules({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _RulesState extends State<Rules> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: AllColors.appBarColor,
           centerTitle: true,
           title: Text("নিয়মাবলী"),
         ),

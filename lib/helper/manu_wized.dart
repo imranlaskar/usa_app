@@ -10,7 +10,7 @@ class MenuWidget extends StatelessWidget {
     double _heightOnly=MediaQuery.of(context).size.height;
     double _widthOnly=MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.orange.shade100,
+      color: Colors.white10,
       padding: const EdgeInsets.only(top: 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -19,10 +19,10 @@ class MenuWidget extends StatelessWidget {
             height: _heightOnly*0.045,
           ),
           CircleAvatar(
-            radius: 65,
+            radius: 95,
             backgroundColor: Colors.grey,
             child: CircleAvatar(
-              radius: 60,
+              radius: 90,
               backgroundImage: AssetImage
                 ('assets/images/NewUSA.jpg'),
             ),
@@ -30,26 +30,26 @@ class MenuWidget extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          // Text(
-          //   'Creator',
-          //   style: TextStyle(
-          //     color: Colors.teal,
-          //     fontWeight: FontWeight.bold,
-          //     fontSize: _widthOnly*0.04,
-          //     fontFamily: 'BalsamiqSans',),
-          // ),
-          Align(
-            alignment: Alignment.center,
-            child: Text(
-              '',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                color: Colors.teal,
-                fontWeight: FontWeight.bold,
-                fontSize: _widthOnly*0.06,
-                fontFamily: 'BalsamiqSans',),
-            ),
+          Text(
+            'Uttarpara Student Association',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: _widthOnly*0.055,
+              fontFamily: 'BalsamiqSans',),
           ),
+          // Align(
+          //   alignment: Alignment.center,
+          //   child: Text(
+          //     '',
+          //     textAlign: TextAlign.right,
+          //     style: TextStyle(
+          //       color: Colors.teal,
+          //       fontWeight: FontWeight.bold,
+          //       fontSize: _widthOnly*0.06,
+          //       fontFamily: 'BalsamiqSans',),
+          //   ),
+          // ),
           SizedBox(
             height: 20,
           ),
