@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:usa_app/helper/coustom_button.dart';
+import 'package:usa_app/helper/coustom_textformfield.dart';
+import 'package:usa_app/screen/admin/admin_home.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -8,11 +10,6 @@ class LogInPage extends StatefulWidget {
   @override
   _LogInPageState createState() => _LogInPageState();
 }
-
-TextEditingController userNameController = TextEditingController();
-TextEditingController passController = TextEditingController();
-String _userName ="admin";
-String _pass = '222';
 
 class _LogInPageState extends State<LogInPage> {
   @override
@@ -52,37 +49,27 @@ class _LogInPageState extends State<LogInPage> {
                   padding: const EdgeInsets.all(28.0),
                   child: Column(
                     children: [
-                      TextFormField(
-                        controller: userNameController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Username',
-                          hintText: 'Enter your User Name',
-                        ),
+                      CoustomTextFormField(
+                          labelText: "User Name",
+                          hintText: "Enter User Name"
                       ),
                       SizedBox(height: 10,),
-                      TextFormField(
-                        obscureText: true,
-                        controller: passController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Password',
-                          hintText: 'Enter your Password',
-                        ),
+                      CoustomTextFormField(
+                          labelText: "Password",
+                          hintText: "Enter Password"
                       ),
                       SizedBox(height: 15,),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.teal
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context)=>AdminHomePage()));
+                        },
+                        child: CoustomButton(
+                            buttonHight: 50,
+                            buttonWidth: 300,
+                            btnTextColor: Colors.white,
+                            buttonText: "LogIn",
                         ),
-                          onPressed: (){
-
-                          },
-                          child: Text('Login',
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          )
                       )
                     ],
                   ),

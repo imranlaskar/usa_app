@@ -30,8 +30,7 @@ class MenuWidget extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text(
-            'Uttarpara Student Association',
+          Text('Uttarpara Student Association',
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
