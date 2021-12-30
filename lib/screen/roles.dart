@@ -36,13 +36,17 @@ class _RulesState extends State<Rules> {
               padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
-                  Text("নিয়মাবলী",
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white
-                    ),),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 40,
+                    child: Text("নিয়মাবলী",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white
+                      ),),
+                  ),
               ],
-        ),
+             ),
             ),
           ),
       )

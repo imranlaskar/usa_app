@@ -65,8 +65,8 @@ class _LogInPageState extends State<LogInPage> {
                               MaterialPageRoute(builder: (context)=>AdminHomePage()));
                         },
                         child: CoustomButton(
-                            buttonHight: 50,
-                            buttonWidth: 300,
+                            buttonHight: 40,
+                            buttonWidth: 400,
                             btnTextColor: Colors.white,
                             buttonText: "LogIn",
                         ),
