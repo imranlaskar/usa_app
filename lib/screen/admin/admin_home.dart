@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:usa_app/helper/coustom_button.dart';
+import 'package:usa_app/screen/admin/data_update.dart';
 import 'package:usa_app/utill/all_color.dart';
 
 class AdminHomePage extends StatefulWidget {
@@ -20,25 +21,20 @@ class _AdminHomePageState extends State<AdminHomePage> {
       ),
       body: Column(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(height: 30,),
           InkWell(
             onTap: (){
-
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context)=>DataUpdate()));
             },
-              child: CoustomButton(buttonHight: 50, buttonWidth: 250, btnTextColor: AllColors.appColor, buttonText: "buttonText")),
-          SizedBox(height: 20,),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              children: [
-                Row(
-                  children: [
-
-                  ],
-                )
-              ],
+            child: CoustomButton(
+                buttonHight: 50,
+                buttonWidth: 250,
+                btnTextColor: AllColors.appBarColor,
+                buttonText: "Data Update"
             ),
-          ),
+          )
         ],
       ),
     );

@@ -18,32 +18,133 @@ class _AboutUSAState extends State<AboutUSA> {
         centerTitle: true,
         title: Text("সমিতি সম্পর্কে"),
       ),
-      body:
-      Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/back.jpg"),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(Colors.black,
-                  BlendMode.dstATop)
-          ),
-        ),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                Text("সমিতি সম্পর্কে",
+      body:SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                color: AllColors.textBacgroundColor1,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
                   style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white
+                      fontSize: 20,
+                      color: Colors.black
                   ),
                 ),
-              ],
-            ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor2,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor1,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor2,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor1,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor2,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor1,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor2,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor1,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor2,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor1,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+              Container(
+                color: AllColors.textBacgroundColor2,
+                width: MediaQuery.of(context).size.width,
+                child: Text("",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

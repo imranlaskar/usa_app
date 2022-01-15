@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:usa_app/utill/all_color.dart';
 
 class CoustomTextFormField extends StatefulWidget {
+  bool obdcureValue;
+  TextEditingController editingController;
   String labelText;
   String hintText;
   CoustomTextFormField({Key? key,
     required this.labelText,
-    required this.hintText
+    required this.hintText,
+    required this.obdcureValue,
+    required this.editingController
   }) : super(key: key);
 
   @override
