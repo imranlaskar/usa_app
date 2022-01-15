@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:usa_app/helper/coustom_button.dart';
+import 'package:usa_app/helper/coustom_textformfield.dart';
 import 'package:usa_app/utill/all_color.dart';
 
 class DataUpdate extends StatefulWidget {
@@ -66,7 +67,15 @@ class _DataUpdateState extends State<DataUpdate> {
             ),
           ),
           SizedBox(height: 20,),
-
+          Padding(
+            padding: const EdgeInsets.only(left: 28.0,right: 28),
+            child: CoustomTextFormField(
+                labelText: "Value",
+                hintText: "Enter Value",
+                obdcureValue: false,
+                editingController: _valueController
+            ),
+          ),
           SizedBox(height: 20,),
           InkWell(
               onTap: (){
@@ -97,6 +106,7 @@ class _DataUpdateState extends State<DataUpdate> {
     );
   }
 }
+TextEditingController _valueController = TextEditingController();
 String? initValMember;
 String? initValMonth;
 List<String> memberList = [
