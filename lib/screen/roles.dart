@@ -22,30 +22,21 @@ class _RulesState extends State<Rules> {
           centerTitle: true,
           title: Text("নিয়মাবলী"),
         ),
-        body:
-        Expanded(
-          child: ListView.builder(
-            itemCount: ruleText1.length,
-              itemBuilder: (context, index){
-              return Container(
-                color: ruleBacgroundColor1[index],
-                width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(ruleText1[index],
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black
-                    ),
-                  ),
-                ),
-              );
-              }
-          ),
+        body: Column(
+          children: [
+              Text("Imran")
+          ],
         ),
     );
   }
 }
+List<String> abc = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+];
 List<String> ruleText1 = [
   "সমিতির সকল সদস্যের মধ্যে একতা থাকবে।",
   "সমিতির চাঁদা মাসিক ভিত্তিতে তোলা হবে। মাসিক চাঁদা সময়মত পরিশোধ করতে না পারলে নির্ধারিত জরিমানা দিতে হবে।",

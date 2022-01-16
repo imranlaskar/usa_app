@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:usa_app/helper/coustom_button.dart';
+import 'package:usa_app/screen/member/member_account_details.dart';
+import 'package:usa_app/screen/member/member_login.dart';
 import 'package:usa_app/utill/all_color.dart';
 import 'package:usa_app/utill/all_size.dart';
 
@@ -61,6 +64,19 @@ class _MainAuthorityState extends State<MainAuthority> {
                   style: TextStyle(
                       fontSize: AllSize.textSize20
                   ),),
+                SizedBox(height: 30,),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context)=>MemberLoginPage()));
+                  },
+                  child: CoustomButton(
+                      buttonHight: 50,
+                      buttonWidth: 250,
+                      btnTextColor: AllColors.textColorWhite,
+                      buttonText: "buttonText"),
+                )
               ],
             ),
           ),

@@ -7,6 +7,7 @@ import 'package:usa_app/screen/about_usa.dart';
 import 'package:usa_app/screen/account/account_namber.dart';
 import 'package:usa_app/screen/admin/login_page.dart';
 import 'package:usa_app/screen/member/member_list.dart';
+import 'package:usa_app/screen/notice/notice.dart';
 import 'package:usa_app/screen/roles.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
@@ -66,17 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         sliderMain: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/back.jpg"),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(Colors.black,
-                    BlendMode.dstATop)
-    ),
-    ),
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
@@ -87,29 +77,52 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
                       children: [
+                        SizedBox(height: 12,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width,
-                          child: SizedBox(
-                            height: buttonHeight,
-                            child: ElevatedButton(
-                                child: Text("সমিতি সম্পর্কে",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: buttonFontSize,
-                                      fontWeight: FontWeight.bold
-                                  ),
-                                ),
-                              style: ElevatedButton.styleFrom(
+                          height: buttonHeight,
+                          child: ElevatedButton(
+                            child: Text("Notice",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: buttonFontSize,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            style: ElevatedButton.styleFrom(
                                 primary: Colors.white,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30)
+                                    borderRadius: BorderRadius.circular(30)
                                 )
-                              ),
-                                onPressed: (){
-                                  Navigator.push(context,
-                                      MaterialPageRoute(builder: (context)=>AboutUSA()));
-                                },
                             ),
+                            onPressed: (){
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=>NoticeViewPage()));
+                            },
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          height: buttonHeight,
+                          child: ElevatedButton(
+                              child: Text("সমিতি সম্পর্কে",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: buttonFontSize,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)
+                              )
+                            ),
+                              onPressed: (){
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context)=>AboutUSA()));
+                              },
                           ),
                         ),
                         SizedBox(height: 12,),
@@ -251,9 +264,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-      ),
-    ]
-    ),
         )
       )
     );

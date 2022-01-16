@@ -19,23 +19,25 @@ class _AdminHomePageState extends State<AdminHomePage> {
         centerTitle: true,
         title: Text('Admin Home'),
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 30,),
-          InkWell(
-            onTap: (){
-              Navigator.push(context,
-                  MaterialPageRoute(
-                      builder: (context)=>DataUpdate()));
-            },
-            child: CoustomButton(
-                buttonHight: 50,
-                buttonWidth: 250,
-                btnTextColor: AllColors.appBarColor,
-                buttonText: "Data Update"
-            ),
-          )
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 30,),
+            InkWell(
+              onTap: (){
+                Navigator.push(context,
+                    MaterialPageRoute(
+                        builder: (context)=>DataUpdate()));
+              },
+              child: CoustomButton(
+                  buttonHight: 50,
+                  buttonWidth: 250,
+                  btnTextColor: AllColors.textColorWhite,
+                  buttonText: "Data Update"
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
