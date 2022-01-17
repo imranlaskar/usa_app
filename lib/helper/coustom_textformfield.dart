@@ -23,6 +23,11 @@ class _CoustomTextFormFieldState extends State<CoustomTextFormField> {
     return Padding(
       padding: const EdgeInsets.only(left: 8.0,right: 8),
       child: TextFormField(
+        validator: (value){
+          if(value==null || value!.isEmpty){
+            return "This field can not be empty";
+          }
+        },
         cursorColor: AllColors.appColor,
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(

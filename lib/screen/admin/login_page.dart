@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:usa_app/helper/coustom_button.dart';
 import 'package:usa_app/helper/coustom_textformfield.dart';
 import 'package:usa_app/screen/admin/admin_home.dart';
@@ -11,13 +13,7 @@ class LogInPage extends StatefulWidget {
   _LogInPageState createState() => _LogInPageState();
 }
 
-String emailAdmin = "email@gmail.com";
-String passWord = "12345";
-TextEditingController _emailController = TextEditingController();
-TextEditingController _passController = TextEditingController();
-
 class _LogInPageState extends State<LogInPage> {
-  final GlobalKey <FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,8 +69,9 @@ class _LogInPageState extends State<LogInPage> {
                         SizedBox(height: 15,),
                         InkWell(
                           onTap: (){
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context)=>AdminHomePage()));
+                            SignIn(
+                                _emailController.text,
+                                _passController.text, context);
                           },
                           child: CoustomButton(
                               buttonHight: 40,
@@ -95,3 +92,21 @@ class _LogInPageState extends State<LogInPage> {
     );
   }
 }
+void SignIn(String email, String password, context)async{
+  if(_formKey.currentState!.validate()){
+    await _auth.signInWithEmailAndPassword(
+        email: email, password: password
+    ).then((value) => {
+      Fluttertoast.showToast(msg: "LogIn Successful!"),
+    Navigator.push(context,
+    MaterialPageRoute(
+    builder: (context)=>AdminHomePage()))
+    }).catchError((e){
+      Fluttertoast.showToast(msg: e.message);
+    });
+  }
+}
+final GlobalKey <FormState> _formKey = GlobalKey<FormState>();
+final _auth = FirebaseAuth.instance;
+TextEditingController _emailController = TextEditingController();
+TextEditingController _passController = TextEditingController();
