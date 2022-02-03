@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:usa_app/helper/coustom_button.dart';
 import 'package:usa_app/model/member_list_model.dart';
+import 'package:usa_app/screen/member/member_login.dart';
 import 'package:usa_app/utill/all_color.dart';
 import 'package:usa_app/utill/all_size.dart';
 
@@ -31,12 +33,21 @@ class _AuthorityDetailsState extends State<AuthorityDetails> {
                 child: Image.asset(widget.memberListModel.img)
             ),
               SizedBox(height: 8,),
-              Text("নাম : ${widget.memberListModel.name}",
-                style: TextStyle(
-                  fontSize: AllSize.textSize25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple
-                ),),
+              Container(
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  color: Colors.greenAccent
+                ),
+                child: Center(
+                  child: Text("নাম : ${widget.memberListModel.name}",
+                    style: TextStyle(
+                      fontSize: AllSize.textSize25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.purple
+                    ),),
+                ),
+              ),
               SizedBox(height: 8,),
               Text("বাবার নাম : ${widget.memberListModel.fatherName}",
                 style: TextStyle(
@@ -44,6 +55,11 @@ class _AuthorityDetailsState extends State<AuthorityDetails> {
                 ),),
               SizedBox(height: 8,),
               Text("সদস্য নম্বর : ${widget.memberListModel.mdmberNo}",
+                style: TextStyle(
+                    fontSize: AllSize.textSize20
+                ),),
+              SizedBox(height: 8,),
+              Text("মোবাইল নম্বর : ${widget.memberListModel.phoneNo}",
                 style: TextStyle(
                     fontSize: AllSize.textSize20
                 ),),
@@ -61,6 +77,18 @@ class _AuthorityDetailsState extends State<AuthorityDetails> {
                 style: TextStyle(
                     fontSize: AllSize.textSize20
                 ),),
+              SizedBox(height: 15,),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MemberLoginPage()));
+                },
+                child: CoustomButton(
+                    buttonHight: 50,
+                    buttonWidth: 230,
+                    btnTextColor: Colors.white,
+                    buttonText: "আপনার হিসাব দেখুন"
+                ),
+              ),
             ],
           ),
         ),
@@ -68,3 +96,4 @@ class _AuthorityDetailsState extends State<AuthorityDetails> {
     );
   }
 }
+AllColors allColors = AllColors();

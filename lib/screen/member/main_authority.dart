@@ -6,10 +6,10 @@ import 'package:usa_app/utill/all_color.dart';
 import 'package:usa_app/utill/all_size.dart';
 
 class MainAuthority extends StatefulWidget {
-  String img,name, fatherName, memberNo, admitionDate, address;
+  String img,name, fatherName, memberNo,phoneNo, admitionDate, address;
 
   MainAuthority({Key? key,required this.img, required this.name, required this.fatherName,
-  required this.memberNo, required this.admitionDate, required this.address}) : super(key: key);
+  required this.memberNo,required this.phoneNo, required this.admitionDate, required this.address}) : super(key: key);
 
   @override
   _MainAuthorityState createState() => _MainAuthorityState();
@@ -47,6 +47,11 @@ class _MainAuthorityState extends State<MainAuthority> {
                   ),),
                 SizedBox(height: 8,),
                 Text("সদস্য নম্বর : ${widget.memberNo}",
+                  style: TextStyle(
+                      fontSize: AllSize.textSize20
+                  ),),
+                SizedBox(height: 8,),
+                Text("ফোন নম্বর : ${widget.phoneNo}",
                   style: TextStyle(
                       fontSize: AllSize.textSize20
                   ),),

@@ -8,26 +8,4 @@ static Color appColor = Colors.teal;
 static Color textBacgroundColor1 = Colors.greenAccent;
 static Color textBacgroundColor2 = Colors.lightBlueAccent;
 
-static List<Color> ruleBacgroundColor = [
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-  textBacgroundColor1,
-  textBacgroundColor2,
-];
 }

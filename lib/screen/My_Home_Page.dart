@@ -20,9 +20,6 @@ class MyHomePage extends StatefulWidget {
 GlobalKey<SliderMenuContainerState> _key =
 new GlobalKey<SliderMenuContainerState>();
 
-double buttonFontSize = 20;
-double buttonHeight = 50;
-
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -51,15 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 title = title;
                 if(title=="ABOUT US"){
                   Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AboutUs()),
+                    MaterialPageRoute(builder: (context) => AboutUs(screenText: '"This app made by Imran Laskar."',)),
                   );
                 }else if(title=="Rate this App"){
                   Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AboutUs()),
+                    MaterialPageRoute(builder: (context) => AboutUs(screenText: "Currently it's not posible" ,)),
                   );
                 }else if(title=="More App") {
                   Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AboutUs()),
+                    MaterialPageRoute(builder: (context) => AboutUs(screenText: 'There are no app available now!!',)),
                   );
                 }
               });
@@ -251,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               onPressed: (){
                                 Navigator.push(context,
-                                    MaterialPageRoute(builder: (context)=>LogInPage()));
+                                    MaterialPageRoute(builder: (context)=>LogIn()));
                               },
                             ),
                           ),
@@ -269,3 +266,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+double buttonFontSize = 20;
+double buttonHeight = 50;

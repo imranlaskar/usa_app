@@ -59,7 +59,8 @@ class _MemberListState extends State<MemberList> {
                                 fatherName: "মোঃ আইউব আলী শিকদার",
                                 memberNo: "০১ (এক)",
                                 admitionDate: "০৯/০৭/২০১৫",
-                                address: "উত্তরপাড়া, কোটালীপাড়া,"
+                                address: "উত্তরপাড়া, কোটালীপাড়া,",
+                              phoneNo: '০১৯৫৪৮১৩৪২১',
                             )));
                       },
                     ),
@@ -85,7 +86,8 @@ class _MemberListState extends State<MemberList> {
                                   fatherName: "মোঃ ছরোয়ার হাওলাদার",
                                   memberNo: "০২ (দুই)",
                                   admitionDate: "০৯/০৭/২০১৫",
-                                  address: "উত্তরপাড়া, কোটালীপাড়া,")));
+                                  address: "উত্তরপাড়া, কোটালীপাড়া,",
+                                phoneNo: '০১৯৫৩৮৫১৯১৪',)));
                         },
                           child: Image.asset("assets/images/Emon.jpg")),
                     ),
@@ -113,7 +115,8 @@ class _MemberListState extends State<MemberList> {
                                   fatherName: "মোঃ জাফর লস্কর",
                                   memberNo: "০৪ (চার)",
                                   admitionDate: "০৯/০৭/২০১৫",
-                                  address: "উত্তরপাড়া, কোটালীপাড়া,")));
+                                  address: "উত্তরপাড়া, কোটালীপাড়া,",
+                                phoneNo: '০১৬৩৫৬১২৪৬৪',)));
                         },
                           child: Image.asset("assets/images/Imran.jpg")),
                     ),
@@ -184,20 +187,20 @@ List <MemberListModel> listOfModel = [
   memberListModel17
 ];
 
-MemberListModel memberListModel1 = MemberListModel("assets/images/sahin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)", "০৯/০৭/২০১৫", "০১৯৩১২৬৭৩০৫", "উত্তরপাড়া,");
-MemberListModel memberListModel2 = MemberListModel("assets/images/Robiul.jpg", "মোঃ রবিউল ইসলাম", "মোঃ ", "০৫ (পাঁচ)", "২১/০৮/২০১৫", "০১৯৩০১৪৩৪১৬", "উত্তরপাড়া,");
-MemberListModel memberListModel3 = MemberListModel("assets/images/Aminul.jpg", "মোঃ আমিনুল হাওলাদার", "মোঃ ", "০৬ (ছয়)", "২১/০৮/২০১৫", "০১৪০৩৬২৫৫১২", "উত্তরপাড়া, ");
-MemberListModel memberListModel4 = MemberListModel("assets/images/Alom.jpg", "মোঃ আলম শিকদার", "মোঃ শামিম শিকদার", "০৭ (সাত)", "২৯/০১/২০১৬", "০১৯৩৯৩৬৬৩৫২", "উত্তরপাড়া,");
-MemberListModel memberListModel5 = MemberListModel("assets/images/null.jpg", "মোঃ শাহিন শিকদার", "মোঃ আইউব আলী শিকদার", "০৮ (আট)", "০৮/০৪/২০১৬", "০১৯৪৭৪৩৮৩১২", "উত্তরপাড়া, ");
-MemberListModel memberListModel6 = MemberListModel("assets/images/Belal.jpg", "মোঃ বেলাল লস্কর", "মোঃ ছলেমান লস্কর", "০৯ (নয়)", "০৮/০৪/২০১৬", "০১৯৫২৬২৪৭৫৩", "উত্তরপাড়া, ");
-MemberListModel memberListModel7 = MemberListModel("assets/images/Saidul.jpg", "মোঃ সাইদুল হাওলাদার", "মোঃ আঃ সামাদ হাওলাদার", "১০ (দশ)", "০৮/০৪/২০১৬", "০১৯৮৮৩৯৭১৪৯", "উত্তরপাড়া, ");
-MemberListModel memberListModel8 = MemberListModel("assets/images/Torikul.jpg", "মোঃ তরিকুল ইসলাম", "মোঃ মুজিবুর রহমান", "১১ (এগারো)", "০৮/০৪/২০১৬", "০১৯৭১১৩৭৭৫৬", "উত্তরপাড়া, ");
-MemberListModel memberListModel9 = MemberListModel("assets/images/Romjan.jpg", "মোঃ রমজান শিকদার", "মোঃ ওহাব শিকদার", "১২ (বার)", "১৪/০৪/২০১৬", "০১৯৪৪১৬৯২৯৩", "জটিয়ার বাড়ি, ");
-MemberListModel memberListModel10 = MemberListModel("assets/images/Tanvir.jpg", "মোঃ তানভির তালুকদার", "মোঃ ফায়েক তালুকদার", "১৩ (তের)", "০৭/০৭/২০১৭", "০১৯৭১১৩৭৭৯২", "উত্তরপাড়া, ");
-MemberListModel memberListModel11 = MemberListModel("assets/images/null.jpg", "মোঃ মাসুদ তালুকদার", "মোঃ মুনসুর তালুকদার", "১৪ (চৌদ্দ)", "০৭/০৭/২০১৭", "০১৯৪০৪২৬৭০৬", "উত্তরপাড়া, ");
-MemberListModel memberListModel12 = MemberListModel("assets/images/null.jpg", "মোঃ মোস্তাকিম ফকির", "মোঃ সবুজ ফকির", "১৫ (পনেরো)", "০৭/০৭/২০১৭", "০১৯৩৭২৭৮৪৩৬", "পূর্বপাড়া, ");
-MemberListModel memberListModel13 = MemberListModel("assets/images/Kamal.jpg", "মোঃ কামাল মোল্লা", "মোঃ মতিয়ার মোল্লা", "১৬ (ষোল)", "২৪/১২/২০১৭", "০১৯৮২৪৬১২৩৫", "উত্তরপাড়া, ");
-MemberListModel memberListModel14 = MemberListModel("assets/images/Tarek.jpg", "মোঃ তারেক কাজী", "মোঃ নান্টু কাজী", "১৭ (সতেরো)", "৩১/১২/২০১৭", "০১৯৮০৪৯১২৩৩", "উত্তরপাড়া, ");
-MemberListModel memberListModel15 = MemberListModel("assets/images/Salauddin.jpg", "মোঃ সালাহউদ্দিন শিকদার", "মোঃ সাইফুল আলম", "১৮ (আঠারো)", "০২/০২/২০১৮", "০১৯১৫৮২১০৯৯", "উত্তরপাড়া, ");
-MemberListModel memberListModel16 = MemberListModel("assets/images/Nahid.jpg", "মোঃ নাহিদ লস্কর", "মোঃ জাফর লস্কর", "১৯ (ঊনিশ)", "০২/০২/২০১৮", "০১৯৩৮৯৬১১০৩", "উত্তরপাড়া,");
-MemberListModel memberListModel17 = MemberListModel("assets/images/Anu.jpg", "মোঃ মাহাবুব লস্কর", "মোঃ হাইউল লস্কর", "২০ (বিশ)", "২৮/০২/২০১৮", "০১৯৪৫৯১৬৮৯১", "উত্তরপাড়া,");
+MemberListModel memberListModel1 = MemberListModel("assets/images/sahin.jpg", "মোঃ শাহিন তালুকদার", "মোঃ এচাহাক তালুকদার", "০৩ (তিন)","০১৯৩১২৬৭৩০৫", "০৯/০৭/২০১৫", "০১৯৩১২৬৭৩০৫", "উত্তরপাড়া,");
+MemberListModel memberListModel2 = MemberListModel("assets/images/Robiul.jpg", "মোঃ রবিউল ইসলাম", "মোঃ ", "০৫ (পাঁচ)","০১৯৩০১৪৩৪১৬", "২১/০৮/২০১৫", "০১৯৩০১৪৩৪১৬", "উত্তরপাড়া,");
+MemberListModel memberListModel3 = MemberListModel("assets/images/Aminul.jpg", "মোঃ আমিনুল হাওলাদার", "মোঃ ", "০৬ (ছয়)","০১৪০৩৬২৫৫১২", "২১/০৮/২০১৫", "০১৪০৩৬২৫৫১২", "উত্তরপাড়া, ");
+MemberListModel memberListModel4 = MemberListModel("assets/images/Alom.jpg", "মোঃ আলম শিকদার", "মোঃ শামিম শিকদার", "০৭ (সাত)","০১৯৩৯৩৬৬৩৫২", "২৯/০১/২০১৬", "০১৯৩৯৩৬৬৩৫২", "উত্তরপাড়া,");
+MemberListModel memberListModel5 = MemberListModel("assets/images/null.jpg", "মোঃ শাহিন শিকদার", "মোঃ আইউব আলী শিকদার", "০৮ (আট)","০১৯৪৭৪৩৮৩১২", "০৮/০৪/২০১৬", "০১৯৪৭৪৩৮৩১২", "উত্তরপাড়া, ");
+MemberListModel memberListModel6 = MemberListModel("assets/images/Belal.jpg", "মোঃ বেলাল লস্কর", "মোঃ ছলেমান লস্কর", "০৯ (নয়)", "০১৯৫২৬২৪৭৫৩","০৮/০৪/২০১৬", "০১৯৫২৬২৪৭৫৩", "উত্তরপাড়া, ");
+MemberListModel memberListModel7 = MemberListModel("assets/images/Saidul.jpg", "মোঃ সাইদুল হাওলাদার", "মোঃ আঃ সামাদ হাওলাদার", "১০ (দশ)","০১৯৮৮৩৯৭১৪৯", "০৮/০৪/২০১৬", "০১৯৮৮৩৯৭১৪৯", "উত্তরপাড়া, ");
+MemberListModel memberListModel8 = MemberListModel("assets/images/Torikul.jpg", "মোঃ তরিকুল ইসলাম", "মোঃ মুজিবুর রহমান", "১১ (এগারো)", "০১৯৭১১৩৭৭৫৬","০৮/০৪/২০১৬", "০১৯৭১১৩৭৭৫৬", "উত্তরপাড়া, ");
+MemberListModel memberListModel9 = MemberListModel("assets/images/Romjan.jpg", "মোঃ রমজান শিকদার", "মোঃ ওহাব শিকদার", "১২ (বার)","০১৯৪৪১৬৯২৯৩", "১৪/০৪/২০১৬", "০১৯৪৪১৬৯২৯৩", "জটিয়ার বাড়ি, ");
+MemberListModel memberListModel10 = MemberListModel("assets/images/Tanvir.jpg", "মোঃ তানভির তালুকদার", "মোঃ ফায়েক তালুকদার", "১৩ (তের)","০১৯৭১১৩৭৭৯২", "০৭/০৭/২০১৭", "০১৯৭১১৩৭৭৯২", "উত্তরপাড়া, ");
+MemberListModel memberListModel11 = MemberListModel("assets/images/null.jpg", "মোঃ মাসুদ তালুকদার", "মোঃ মুনসুর তালুকদার", "১৪ (চৌদ্দ)","০১৯৪০৪২৬৭০৬", "০৭/০৭/২০১৭", "০১৯৪০৪২৬৭০৬", "উত্তরপাড়া, ");
+MemberListModel memberListModel12 = MemberListModel("assets/images/null.jpg", "মোঃ মোস্তাকিম ফকির", "মোঃ সবুজ ফকির", "১৫ (পনেরো)", "০১৯৩৭২৭৮৪৩৬","০৭/০৭/২০১৭", "০১৯৩৭২৭৮৪৩৬", "পূর্বপাড়া, ");
+MemberListModel memberListModel13 = MemberListModel("assets/images/Kamal.jpg", "মোঃ কামাল মোল্লা", "মোঃ মতিয়ার মোল্লা", "১৬ (ষোল)", "০১৯৮২৪৬১২৩৪","২৪/১২/২০১৭", "০১৯৮২৪৬১২৩৫", "উত্তরপাড়া, ");
+MemberListModel memberListModel14 = MemberListModel("assets/images/Tarek.jpg", "মোঃ তারেক কাজী", "মোঃ নান্টু কাজী", "১৭ (সতেরো)", "০১৯৮০৪৯১২৩৩","৩১/১২/২০১৭", "০১৯৮০৪৯১২৩৩", "উত্তরপাড়া, ");
+MemberListModel memberListModel15 = MemberListModel("assets/images/Salauddin.jpg", "মোঃ সালাহউদ্দিন শিকদার", "মোঃ সাইফুল আলম", "১৮ (আঠারো)","০১৯১৫৮২১০৯৯", "০২/০২/২০১৮", "০১৯১৫৮২১০৯৯", "উত্তরপাড়া, ");
+MemberListModel memberListModel16 = MemberListModel("assets/images/Nahid.jpg", "মোঃ নাহিদ লস্কর", "মোঃ জাফর লস্কর", "১৯ (ঊনিশ)","০১৯৩৮৯৬১১০৩", "০২/০২/২০১৮", "০১৯৩৮৯৬১১০৩", "উত্তরপাড়া,");
+MemberListModel memberListModel17 = MemberListModel("assets/images/Anu.jpg", "মোঃ মাহাবুব লস্কর", "মোঃ হাইউল লস্কর", "২০ (বিশ)","০১৯৪৫৯১৬৮৯১", "২৮/০২/২০১৮", "০১৯৪৫৯১৬৮৯১", "উত্তরপাড়া,");

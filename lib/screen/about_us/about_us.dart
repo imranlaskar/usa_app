@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 class AboutUs extends StatefulWidget {
-  const AboutUs({Key? key}) : super(key: key);
+  String screenText;
+   AboutUs({Key? key,
+   required this.screenText,
+   }) : super(key: key);
 
   @override
   _AboutUsState createState() => _AboutUsState();
@@ -9,6 +12,10 @@ class AboutUs extends StatefulWidget {
 class _AboutUsState extends State<AboutUs> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text(widget.screenText),
+      ),
+    );
   }
 }
