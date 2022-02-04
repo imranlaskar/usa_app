@@ -81,7 +81,8 @@ class _MemberLoginPageState extends State<MemberLoginPage> {
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.indigo
-                      ),),
+                      ),
+                    ),
                   )
                 ],
               )

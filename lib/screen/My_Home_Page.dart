@@ -5,6 +5,7 @@ import 'package:usa_app/online_comunication/online_comunication.dart';
 import 'package:usa_app/screen/about_us/about_us.dart';
 import 'package:usa_app/screen/about_usa.dart';
 import 'package:usa_app/screen/account/account_namber.dart';
+import 'package:usa_app/screen/admin/data_update.dart';
 import 'package:usa_app/screen/admin/login_page.dart';
 import 'package:usa_app/screen/member/member_list.dart';
 import 'package:usa_app/screen/notice/notice.dart';
@@ -248,7 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               onPressed: (){
                                 Navigator.push(context,
-                                    MaterialPageRoute(builder: (context)=>LogIn()));
+                                    MaterialPageRoute(builder: (context)=>DataUpdate()));
                               },
                             ),
                           ),
