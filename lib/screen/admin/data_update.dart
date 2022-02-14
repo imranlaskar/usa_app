@@ -154,12 +154,13 @@ void UpdateAccountDetails() async {
   accountDetailsModel.name=initValMember;
   accountDetailsModel.month=initValMonth;
   accountDetailsModel.receiptNo=_receiptController.text;
-  accountDetailsModel.tk=_monthlyValueController.text;
   accountDetailsModel.penalty=_penaltyController.text;
+  accountDetailsModel.tk=_monthlyValueController.text;
+
   await firebaseFirestore.collection(initValMember!)
   .doc(initValMonth)
   .set(accountDetailsModel.toMap());
-   Fluttertoast.showToast(msg: "Data Save!!");
+   Fluttertoast.showToast(msg: "Data Saved!!");
 }
 
 TextEditingController _monthlyValueController = TextEditingController();
