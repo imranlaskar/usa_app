@@ -98,38 +98,150 @@ class _DataUpdateState extends State<DataUpdate> {
               ),
               SizedBox(height: 20,),
               Padding(
-                padding: const EdgeInsets.only(left: 28.0,right: 28),
-                child: CoustomTextFormField(
-                    labelText: "Receipt No",
-                    hintText: "Enter Receipt No",
-                    obdcureValue: false,
-                    editingController: _receiptController
+                padding: const EdgeInsets.only(left: 36.0,right: 36),
+                child: Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          color: AllColors.appColor
+                      ),
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Center(
+                    child: DropdownButton(
+                      iconDisabledColor: AllColors.appColor,
+                      iconEnabledColor: AllColors.appColor,
+                      hint: Text("Receipt No",
+                        style: TextStyle(color: AllColors.appColor),),
+                      items: receiptList.map(
+                              (val) => DropdownMenuItem(
+                              value: val,
+                              child: Text(val,
+                              )
+                          )
+                      ).toList(),
+                      onChanged: (newVal){
+                        setState(() {
+                          initValReceipt=newVal.toString();
+                        });
+                      },
+                      value: initValReceipt,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 20,),
               Padding(
-                padding: const EdgeInsets.only(left: 28.0,right: 28),
-                child: CoustomTextFormField(
-                    labelText: "Monthly Value",
-                    hintText: "Enter Monthly Value",
-                    obdcureValue: false,
-                    editingController: _monthlyValueController
+                padding: const EdgeInsets.only(left: 36.0,right: 36),
+                child: Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          color: AllColors.appColor
+                      ),
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Center(
+                    child: DropdownButton(
+                      iconDisabledColor: AllColors.appColor,
+                      iconEnabledColor: AllColors.appColor,
+                      hint: Text("Tk",
+                        style: TextStyle(color: AllColors.appColor),),
+                      items: tkList.map(
+                              (val) => DropdownMenuItem(
+                              value: val,
+                              child: Text(val,
+                              )
+                          )
+                      ).toList(),
+                      onChanged: (newVal){
+                        setState(() {
+                          initValTk=newVal.toString();
+                        });
+                      },
+                      value: initValTk,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 20,),
               Padding(
-                padding: const EdgeInsets.only(left: 28.0,right: 28),
-                child: CoustomTextFormField(
-                    labelText: "Penalty Value",
-                    hintText: "Enter Penalty Value",
-                    obdcureValue: false,
-                    editingController: _penaltyController
+                padding: const EdgeInsets.only(left: 36.0,right: 36),
+                child: Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                          color: AllColors.appColor
+                      ),
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Center(
+                    child: DropdownButton(
+                      iconDisabledColor: AllColors.appColor,
+                      iconEnabledColor: AllColors.appColor,
+                      hint: Text("Penalty",
+                        style: TextStyle(color: AllColors.appColor),),
+                      items: panaltiList.map(
+                              (val) => DropdownMenuItem(
+                              value: val,
+                              child: Text(val,
+                              )
+                          )
+                      ).toList(),
+                      onChanged: (newVal){
+                        setState(() {
+                          initValPanalti=newVal.toString();
+                        });
+                      },
+                      value: initValPanalti,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 20,),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 28.0,right: 28),
+              //   child: CoustomTextFormField(
+              //       labelText: "Receipt No",
+              //       hintText: "Enter Receipt No",
+              //       obdcureValue: false,
+              //       editingController: _receiptController
+              //   ),
+              // ),
+              // SizedBox(height: 20,),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 28.0,right: 28),
+              //   child: CoustomTextFormField(
+              //       labelText: "Monthly Value",
+              //       hintText: "Enter Monthly Value",
+              //       obdcureValue: false,
+              //       editingController: _monthlyValueController
+              //   ),
+              // ),
+              // SizedBox(height: 20,),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 28.0,right: 28),
+              //   child: CoustomTextFormField(
+              //       labelText: "Penalty Value",
+              //       hintText: "Enter Penalty Value",
+              //       obdcureValue: false,
+              //       editingController: _penaltyController
+              //   ),
+              // ),
+              // SizedBox(height: 20,),
               InkWell(
                   onTap: (){
                     UpdateAccountDetails();
+                    initValMember=null;
+                    initValTk = null;
+                    initValPanalti = null;
+                    initValReceipt = null;
                   },
                   child: CoustomButton(
                       buttonHight: 50,
@@ -153,9 +265,9 @@ void UpdateAccountDetails() async {
   AccountDetailsModel accountDetailsModel=AccountDetailsModel();
   accountDetailsModel.name=initValMember;
   accountDetailsModel.month=initValMonth;
-  accountDetailsModel.receiptNo=_receiptController.text;
-  accountDetailsModel.penalty=_penaltyController.text;
-  accountDetailsModel.tk=_monthlyValueController.text;
+  accountDetailsModel.receiptNo=initValReceipt;
+  accountDetailsModel.penalty=initValPanalti;
+  accountDetailsModel.tk=initValTk;
 
   await firebaseFirestore.collection(initValMember!)
   .doc(initValMonth)
@@ -163,12 +275,13 @@ void UpdateAccountDetails() async {
    Fluttertoast.showToast(msg: "Data Saved!!");
 }
 
-TextEditingController _monthlyValueController = TextEditingController();
-TextEditingController _penaltyController = TextEditingController();
-TextEditingController _receiptController = TextEditingController();
+
 GlobalKey<FormState> _formKeyDataUpdet= GlobalKey<FormState>();
 String? initValMember;
 String? initValMonth;
+String? initValReceipt;
+String? initValTk;
+String? initValPanalti;
 List<String> memberList = [
   "Jahid",
   "Emon",
@@ -185,4 +298,15 @@ List<String> monthList = [
   "Bangla New Year",
   "April",
   "Eid-ul-Fitor",
+];
+List<String> receiptList = [
+  "301","302","303","304","305","306","307","308","309","310",
+  "311","312","313","314","315","316","317","318","319","320",
+  "321","322","323","324","325","326","327","328","329","330"
+];
+List<String> panaltiList = [
+  "0","20","25","30","35","40","45","50","55","60","65","70","100"
+];
+List<String> tkList = [
+  "100","150","200","250","300","350"
 ];

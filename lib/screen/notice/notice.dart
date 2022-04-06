@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 import 'package:usa_app/model/notice_model.dart';
 import 'package:usa_app/utill/all_color.dart';
 
@@ -21,11 +20,11 @@ class _NoticeViewPageState extends State<NoticeViewPage> {
     docs.map((doc) => doc.data()).toList();
     for(int i=0; i<allData.length;i++)
       postList.add(AdminPostModel.fromMap(allData[i]));
-  }
+   }
   @override
   void initState() {
-    super.initState();
-    getData();
+  super.initState();
+  getData();
   }
 
   @override
@@ -38,7 +37,9 @@ class _NoticeViewPageState extends State<NoticeViewPage> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
-          child: Column(
+          child: postList.isEmpty? Center(
+              child: const CircularProgressIndicator()):
+          Column(
             children: [
               for(int j=postList.length-1; j>=0;j--)
               Padding(
@@ -94,3 +95,13 @@ class _NoticeViewPageState extends State<NoticeViewPage> {
 }
 List<AdminPostModel> postList=[];
 AdminPostModel adminPostModel= AdminPostModel();
+
+final _fireStore = FirebaseFirestore.instance;
+Future<void> getData() async {
+  QuerySnapshot querySnapshot = await
+  _fireStore.collection('adminText').get();
+  final allData = querySnapshot.
+  docs.map((doc) => doc.data()).toList();
+  for(int i=0; i<allData.length;i++)
+    postList.add(AdminPostModel.fromMap(allData[i]));
+}
