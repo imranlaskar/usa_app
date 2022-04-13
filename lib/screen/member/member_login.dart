@@ -85,6 +85,19 @@ class _MemberLoginPageState extends State<MemberLoginPage> {
                     ),
                   )
                 ],
+              ),
+              SizedBox(height: 20,),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>MemberAccountDetails()));
+                },
+                child: CoustomButton(
+                    buttonHight: 40,
+                    buttonWidth: 100,
+                    btnTextColor: Colors.white,
+                    buttonText: "Hisab dekhun"
+                ),
               )
             ],
           ),

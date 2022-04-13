@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:usa_app/helper/coustom_container.dart';
+import 'package:usa_app/model/account_details_model.dart';
 import 'package:usa_app/utill/all_color.dart';
 
 class MemberAccountDetails extends StatefulWidget {
@@ -11,6 +13,23 @@ class MemberAccountDetails extends StatefulWidget {
 }
 
 class _MemberAccountDetailsState extends State<MemberAccountDetails> {
+
+  AccountDetailsModel accountDetailsModel = AccountDetailsModel();
+  @override
+  void initState(){
+    super.initState();
+    FirebaseFirestore.instance
+    .collection(accountDetailsModel.name.toString())
+    .doc(accountDetailsModel.month)
+    .get()
+    .then((value) {
+      this.accountDetailsModel = AccountDetailsModel.fromMap(value.data());
+      setState(() {
+
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +43,7 @@ class _MemberAccountDetailsState extends State<MemberAccountDetails> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 10,),
-            Text("Member Name",
+            Text(accountDetailsModel.name.toString(),
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold
@@ -38,7 +57,7 @@ class _MemberAccountDetailsState extends State<MemberAccountDetails> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CoustomContainer(containerText: "January",),
+                      CoustomContainer(containerText: accountDetailsModel.month.toString(),),
                       SizedBox(height: 10,),
                       CoustomContainer(containerText: "Fabruary",),
                       SizedBox(height: 10,),
@@ -82,3 +101,4 @@ class _MemberAccountDetailsState extends State<MemberAccountDetails> {
     );
   }
 }
+
